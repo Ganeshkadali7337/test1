@@ -1,21 +1,19 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import Login from "./Login";
-import ResetPassword from "./ResetPassword";
+import SignUp from "./SignUp";
+import ProtectedRoute from "./ProtectedRoute";
+import NotFound from "./NotFound";
+import "./App.css";
 
 const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/home" component={Home} />
+        <ProtectedRoute exact path="/" component={Home} />
         <Route path="/login" component={Login} />
-        <Route path="/reset-password/:token" component={ResetPassword} />
-        <Redirect from="/" to="/home" />
+        <Route path="/signup" component={SignUp} />
+        <Route component={NotFound} />
       </Switch>
     </Router>
   );

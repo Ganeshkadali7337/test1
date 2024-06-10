@@ -1,0 +1,33 @@
+.list-item {
+  width: 250px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 8px;
+}
+
+.name {
+  font-size: 14px;
+}
+.para {
+  font-size: 12px;
+}
+
+.details-button {
+  height: 30px;
+  width: 130px;
+  border-width: 0px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+}
+
+@media (min-width: 1024px) {
+  .name {
+    font-size: 18px;
+  }
+  .para {
+    font-size: 14px;
+  }
+}
